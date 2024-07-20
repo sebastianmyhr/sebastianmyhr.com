@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500&display=swap');
 
-:root {
-    --background-color: #0d1013;
-    --primary-color: #e8e4d4;
-    --secondary-color: #979992;
-    --highlight-color: #2e2ee6;
+  :root {
+    --primary-color: #0d1013;
+    --background-color: #ffffff;
+    --highlight-color: #ff0000;
 }
 
 html {
@@ -19,50 +18,50 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     margin: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 50px;
+    padding: 0;
     flex-shrink: 0;
     color: var(--primary-color);
-    background-color: var(--background-color);
+    background-image: url("./assets/sail.jpg");
+    background-size: 2000px auto;
+    background-repeat: no-repeat;
     font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
     flex: 0;
     flex-direction: column;
     justify-content: space-between;
-    border-color: #e8e4d4;
-    border-width: 5;
-    border-style: solid;
-    box-shadow: 12px 12px 0px 1px var(--primary-color);
 }
 
-ul {
+ul.links {
     list-style: none;
     padding-left: 0;
 }
 
 a {
-    text-decoration: none; 
     color: var(--primary-color);
 }
 
 a:hover {
-    text-decoration: none; 
-    color: var(--highlight-color);
+    background: linear-gradient(to top, var(--highlight-color) 50%, transparent 50%);
+    text-decoration: none;
 }
 
 .main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.right {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    min-width:90%;
+    padding: 50px;
+    background-color: var(--background-color);
+    border-color: var(--primary-color);
+    border-width: 3px;
+    border-style: solid;
+    box-shadow: 12px 12px 0px 1px var(--primary-color); 
 }
 
 .info {
@@ -71,9 +70,23 @@ a:hover {
     gap: 40px;
 }
 
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .name {
     font-size: 56px;
     font-weight: 500;
+    white-space: nowrap
 }
 
 .position {
@@ -86,9 +99,20 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .bioParagraph {
-    width: 80%;
+    width: 75%;
+}
+
+.experiences {
+    margin-top: 20px;
+    list-style: square;
+    padding-left: 3%;
+}
+
+.company {
+    text-decoration: none;
+    font-weight: 500;
 }
